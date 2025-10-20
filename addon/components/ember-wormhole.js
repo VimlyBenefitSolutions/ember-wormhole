@@ -70,9 +70,7 @@ export default Component.extend({
     // not called in fastboot
     this._super(...arguments);
     let { _wormholeHeadNode, _wormholeTailNode } = this;
-    schedule('render', () => {
-      this._removeRange(_wormholeHeadNode, _wormholeTailNode);
-    });
+    this._removeRange(_wormholeHeadNode, _wormholeTailNode);
   },
 
   _destinationDidChange: observer('_destination', function() {
